@@ -1,0 +1,150 @@
+
+/* pour les mobiles  */
+.description_entreprise , .service{
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr 30px;
+    grid-template-rows: 150px 2fr;
+    
+}
+.description_entreprise{
+    grid-template-rows: 150px 2fr;
+    align-items: center;
+    justify-items: center;
+    margin: 3.8rem 0;
+}
+.service{
+    color: white;
+    background: no-repeat center / cover fixed url("/public/assets/bg_service.png");
+    align-items: center;
+}
+.titre_service , .block_tuiles_service , .titre_description , .paragraphe_description{
+    grid-column: 2/4;
+}
+.titre_description{
+    font-weight: bolder;
+    font-size: 25px;
+}
+.paragraphe_description{
+    grid-row: 2;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 100;
+}
+.titre_service{
+    grid-row: 1;
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.block_tuiles_service{
+    grid-row: 2;
+}
+.tuile_service{
+    margin: 2rem 0;
+    display: grid;
+    justify-items: center;
+}
+.tuile_service img::before{
+    content: " ";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    bottom: -5px;
+    left: -5px;
+    background-color: white;
+}
+.tuile_service img {
+    width:65vw;
+    height: 32.5vw;
+    object-fit:cover;
+}
+.tuile_service img::after{
+    content: " ";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    top: -5px;
+    right: -5px;
+    background-color: white;
+}
+.tuile_service p {
+    margin: 1rem 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* pour les pc's */
+@media screen and (min-width: 992px){
+    .description_entreprise , .service{
+        display: grid;
+        grid-template-columns: 115px 1fr 1fr 120px;
+        grid-template-rows: 150px 2fr;
+    }
+    .titre_service , .block_tuiles_service , .titre_description , .paragraphe_description{
+        grid-column: 2/4;
+    }
+    .description_entreprise{
+        justify-items: flex-start;
+    }
+    .titre_description{
+        font-size: 25px;
+        word-spacing: 0.3em;
+    }
+    .paragraphe_description{
+        font-weight: 100;
+    }
+    .block_tuiles_service{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem 0;
+    }
+    .tuile_service{
+        margin:0;
+        display: grid;
+        justify-items: center; 
+        position: relative;
+    }
+    .tuile_service::before{
+        content: " ";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        z-index: 0;
+        bottom: 49px;
+        left: -5px;
+        background-color: white;
+    }
+    .tuile_service img {
+        width:25vw;
+        height: 12.5vw;
+        object-fit: cover;
+        transition: all .2s;
+        z-index: 2;
+    }
+    .tuile_service::after{
+        content: " ";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        z-index: 0;
+        top: -5px;
+        right: -5px;
+        background-color: white;
+    }
+    .tuile_service:hover:after , .tuile_service:hover:before{
+        background-color: #FEE119;
+    }
+
+    .tuile_service:hover{
+        color: #FEE119;
+        transition: all .2s;
+    }
+    .tuile_service p {
+        margin: 1rem 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}

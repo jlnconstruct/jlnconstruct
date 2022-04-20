@@ -1,0 +1,125 @@
+/* pour les mobiles */
+.main{
+    display: none;
+}
+nav{
+    background-color: var(--primary-color);
+    color: white;
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    padding: 1.2rem;
+    position: fixed;
+    width: 100%;
+}
+.logo{
+    grid-column: 1/2;
+    width: 30px;
+    /* margin: 0 1.9rem; */
+    align-items: center;
+    justify-content: center;
+}
+.logo > img{
+    width: 30px;
+    height: 30px;
+}
+a{
+    color: white;
+}
+.burger-shower{
+    visibility: hidden;
+}
+#hamburger-menu{
+    grid-column: 4/5;
+    grid-row: 1;
+    margin: 0 0 0 3rem;
+    width: 25px;
+    height: 25px;
+    display: block;
+    border: none;
+    background: linear-gradient(
+      to bottom, 
+      white, white 20%, 
+      var(--primary-color) 20%, var(--primary-color) 40%, 
+      white 40%, white 60%, 
+      var(--primary-color) 60%, var(--primary-color) 80%, 
+      white 80%, white 100%
+    );
+}
+#hamburger-menu .sidebar-menu{
+    visibility: hidden;
+    position: fixed;
+    top: -100vh;
+    right: 0;
+    width: 100vw;
+    margin: 70px 0;
+    height: 95vh;
+    background-color: var(--primary-color);
+    padding: 0px 0px;
+    transition: 0.5s;
+}
+#hamburger-input:checked + #hamburger-menu .sidebar-menu {
+    visibility: visible;
+    top: 0;
+}
+#hamburger-input:checked ~ .overlay{
+   visibility: visible;
+   opacity: 0.4;
+}
+
+.contenu_lien_burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.url{
+    margin: 100px 0;
+}
+
+/* pour les pc's */
+@media screen and (min-width: 992px){
+    nav{
+        background-color: var(--primary-color);
+        color: white;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 100px 1fr 1fr 100px;
+        padding: 1.2rem;
+        position: fixed;
+        width: 100%; 
+    }
+    .logo{
+        grid-column: 2/3;
+    }
+    .logo > img{
+        width: 30px;
+    }
+    .lien{
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    .burger-shower{
+        display: none;
+    }
+    #hamburger-menu , .sidebar-menu  > .contenu_lien , .sidebar-menu > .contenu_lien > .url{
+        display: none;
+    }
+    .main{
+        grid-column: 3/4;
+        display: block;
+    }
+    .contenu_lien{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .url{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+
+}
