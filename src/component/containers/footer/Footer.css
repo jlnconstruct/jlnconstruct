@@ -16,12 +16,15 @@ hr{
     grid-row: 1;
     padding-top: 2.5rem;
 }
+.logoHeader img{
+    width: 250px;
+}
 .contenu_footer{
     grid-column: 2/3;
     grid-row: 2/3;
     margin: 1rem 0;
 }
-.email , .telephone , .tva, .adresse_entreprise{
+.email_lien , .telephone_footer , .tva_footer, .adresse_entreprise_footer{
     color: white;
     display: grid;
     grid-template-columns: 20px 1fr;
@@ -68,7 +71,7 @@ hr{
         grid-row: 1;
         margin: 1rem 0;
     }
-    .email , .telephone , .tva, .adresse_entreprise{
+    .email_lien , .telephone_footer , .tva_footer, .adresse_entreprise_footer{
         color: white;
         display: grid;
         grid-template-columns: 20px 1fr;
@@ -79,14 +82,8 @@ hr{
         font-weight: lighter;
         font-size: 16px;
     }
-    .email:hover{
+    .email_lien:hover{
         color: var(--font-color-placeholder);
     }
 
 }
-/* @media screen and(min-width:390px) and ( max-width:350px ){
-    .logoHeader img{
-        width: 300px;
-        object-fit: cover;
-    }
-} */

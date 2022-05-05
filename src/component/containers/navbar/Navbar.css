@@ -6,9 +6,10 @@ nav{
     background-color: var(--primary-color);
     color: white;
     display: grid;
-    align-items: baseline;
-    grid-template-columns: 100px 1fr 1fr 100px;
-    padding: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 30px 1fr 1fr 30px;
+    padding: 1.2rem 1.8rem;
     position: fixed;
     width: 100%;
 }
@@ -32,11 +33,9 @@ a{
 #hamburger-menu{
     grid-column: 4/5;
     grid-row: 1;
-    margin: 0 0 0 3rem;
+    margin: 0;
     width: 25px;
     height: 25px;
-    display: block;
-    border: none;
     background: linear-gradient(
       to bottom, 
       white, white 20%, 

@@ -23,6 +23,7 @@
 .titre_description{
     font-weight: bolder;
     font-size: 25px;
+    margin-bottom: 2.5rem;
 }
 .paragraphe_description{
     grid-row: 2;
