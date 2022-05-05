@@ -11,7 +11,7 @@ nav{
     grid-template-columns: 30px 1fr 1fr 30px;
     padding: 1.2rem 1.8rem;
     position: fixed;
-    width: 100%;
+    width: 100vw;
 }
 .logo{
     grid-column: 1/2;

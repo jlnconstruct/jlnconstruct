@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: 30px 1fr 1fr 30px;
     grid-template-rows: 150px 2fr;
-    
 }
 .description_entreprise{
     grid-template-rows: 150px 2fr;
@@ -44,6 +43,7 @@
     margin: 2rem 0;
     display: grid;
     justify-items: center;
+    align-items: center;
 }
 .tuile_service img::before{
     content: " ";
@@ -74,6 +74,7 @@
     margin: 1rem 0;
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
 }
 
 /* pour les pc's */
@@ -107,6 +108,7 @@
         display: grid;
         justify-items: center; 
         position: relative;
+        cursor: pointer;
     }
     .tuile_service::before{
         content: " ";
@@ -147,5 +149,6 @@
         margin: 1rem 0;
         font-size: 18px;
         font-weight: bold;
+        text-align: center;
     }
 }
