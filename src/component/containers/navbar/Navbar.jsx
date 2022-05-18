@@ -9,6 +9,7 @@ function Navbar() {
     { lien: "/contact" , nom:"Contact" },
   ])
 
+
   return (
     <>
     <nav>
@@ -21,10 +22,10 @@ function Navbar() {
 
             <ul className='contenu_lien_burger'>
                 {liens.map((url,index)=>(
-                  <li className={"url "+index} key={"url_"+index}>
-                    <NavLink to={url.lien}>
-                      <p className='lien'>{url.nom}</p>
-                    </NavLink>
+                  <li className={"url_ "+index} key={"url_"+index}>
+                    <a className='lien_nom' href={url.lien}>
+                      <p className='lien_nom'>{url.nom}</p>
+                    </a>
                   </li>
                 ))}
             </ul>

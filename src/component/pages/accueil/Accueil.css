@@ -81,7 +81,7 @@
 @media screen and (min-width: 992px){
     .description_entreprise , .service{
         display: grid;
-        grid-template-columns: 115px 1fr 1fr 120px;
+        grid-template-columns: 120px 1fr 1fr 120px;
         grid-template-rows: 150px 2fr;
     }
     .titre_service , .block_tuiles_service , .titre_description , .paragraphe_description{

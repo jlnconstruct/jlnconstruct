@@ -11,7 +11,10 @@ nav{
     grid-template-columns: 30px 1fr 1fr 30px;
     padding: 1.2rem 1.8rem;
     position: fixed;
-    width: 99vw;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    z-index: 1000000;
 }
 .logo{
     grid-column: 1/2;
@@ -36,6 +39,7 @@ a{
     margin: 0;
     width: 25px;
     height: 25px;
+    
     background: linear-gradient(
       to bottom, 
       white, white 20%, 
@@ -56,6 +60,10 @@ a{
     background-color: var(--primary-color);
     padding: 0px 0px;
     transition: 0.5s;
+}
+/* plus tard a verifié */
+.sidebar-menu,.main{
+    z-index: 1;
 }
 #hamburger-input:checked + #hamburger-menu .sidebar-menu {
     visibility: visible;
@@ -87,7 +95,10 @@ a{
         grid-template-columns: 100px 1fr 1fr 100px;
         padding: 1.2rem;
         position: fixed;
-        width: 100%; 
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        z-index: 1000000;
     }
     .logo{
         grid-column: 2/3;
@@ -95,9 +106,12 @@ a{
     .logo > img{
         width: 30px;
     }
-    .lien{
+    .lien_nom{
         font-weight: bolder;
         font-size: 18px;
+    }
+    .lien_nom:hover{
+        background: --var(--second-color);
     }
     .burger-shower{
         display: none;
